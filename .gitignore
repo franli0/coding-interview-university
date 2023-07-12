@@ -1,6 +1,7 @@
 .idea
 *.iml
 personal-9894.md
+*.class
 
 # Targets Windows & Unix temporary files
 ~$*
