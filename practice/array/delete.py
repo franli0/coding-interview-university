@@ -41,12 +41,9 @@ class Array:
 
 def main():
     array = Array(100)
-    array.prepend(1)
-    array.prepend(2)
-    array.prepend(3)
-    array.prepend(4)
-    array.prepend(5)
-    deleted = array.delete(0)
+    for i in range(1, 101):
+        array.prepend(i)
+    deleted = array.delete(3)
     print(deleted)
     print(array)
 

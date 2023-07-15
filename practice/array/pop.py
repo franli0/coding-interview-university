@@ -39,11 +39,8 @@ class Array:
     
 def main():
     array = Array(100)
-    array.prepend(1)
-    array.prepend(2)
-    array.prepend(3)
-    array.prepend(4)
-    array.prepend(5)
+    for i in range(1, 101):
+        array.prepend(i)
     print(array)
     poped = array.pop()
     print(poped)
