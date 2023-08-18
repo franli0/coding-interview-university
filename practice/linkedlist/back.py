@@ -13,25 +13,23 @@ class LinkedList:
         if node is None:
             return None
         
-        while node.next.next is not None:
-            node = node.next
+        if node == self.tail:
+            self.tail = node
         
-        value = node.next.data
-        self.tail = node.next
+        while node.next is not None:
+            node = node.next
 
-        return value
+        return node.data
     
     def back_without_tail_pointer(self):
         node = self.head
         if node is None:
             return None
         
-        while node.next.next is not None:
+        while node.next is not None:
             node = node.next
-        
-        value = node.next.data
 
-        return value
+        return node.data
 
 def main():
     linkedlist = LinkedList()

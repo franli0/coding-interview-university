@@ -10,11 +10,12 @@ class LinkedList:
     
     def push_front_with_tail_pointer(self, value):
         new_node = Node(value)
-        new_node.next = self.head
-        self.head = new_node
-
-        if self.tail is None:
+        if self.head is None:
+            self.head = new_node
             self.tail = new_node
+        else:
+            new_node.next = self.head
+            self.head = new_node
 
     def push_front_without_tail_pointer(self, value):
         new_node = Node(value)
